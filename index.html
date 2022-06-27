@@ -20,7 +20,7 @@
         </div>
 
         <div class="todolist-container">
-            <ul class="todos-list">
+            <ul v-if="todos.length > 0" class="todos-list">
                 <li v-for="(singleTodo, index) in todos" class="todo">
                     
                     <div :class="{'todo-done' : singleTodo.done}">
@@ -28,11 +28,14 @@
                     </div>
                     
                     <div class="actions">
-                        <span><i class="fa-solid fa-xmark"></i></span>
+                        <span @click="removeTodo(index)">
+                            <i class="fa-solid fa-xmark"></i>
+                        </span>
                     </div>       
-                </li>
-                
+                </li>    
             </ul>
+
+            <p class="noList" v-else>In questo momento non hai cose da fare, ma puoi sempre aggiungerne</p>
             
         </div>
     </div>
