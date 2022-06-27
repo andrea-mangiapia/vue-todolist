@@ -1,0 +1,58 @@
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #35363a;
+}
+
+
+/* ROOT */
+.inputs-todolist {
+    padding: 30px;
+    text-align: center;
+}
+
+.inputs-todolist input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1 solid black;
+    width: 350px;
+    font-size: 16px;
+}
+
+.inputs-todolist button {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1 solid black;
+    font-size: 16px;
+}
+
+.todolist-container {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.todos-list {
+    list-style-type: none;
+}
+.todos-list .todo {
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
