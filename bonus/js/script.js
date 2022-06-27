@@ -36,10 +36,12 @@ var app = new Vue(
         },
 
         methods: {
+            // rimuovo un oggetto dall'array (cliccando l'icona X nel DOM)
             removeTodo(index) {
                 this.todos.splice(index, 1);
             },
 
+            // al push aggiungo un nuovo oggetto all'array
             addNewTodo() {
                 if(this.newTodoText.length > 0){
                     this.todos.push(
@@ -51,6 +53,17 @@ var app = new Vue(
 
                     this.newTodoText = "";
                 };
+            },
+
+            // cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente
+            todoDone(todo){
+                // SE done è uguale a false, impostare true
+                // ALTRIMENTI impostare false
+                if (todo.done === false){
+                    todo.done = true
+                }else{
+                    todo.done = false
+                }
             },
 
         },

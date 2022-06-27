@@ -23,7 +23,7 @@
             <ul v-if="todos.length > 0" class="todos-list">
                 <li v-for="(singleTodo, index) in todos" class="todo">
                     
-                    <div :class="{'todo-done' : singleTodo.done}">
+                    <div @click="todoDone(singleTodo)" :class="{'todo-done' : singleTodo.done}">
                         {{singleTodo.text}}
                     </div>
                     
