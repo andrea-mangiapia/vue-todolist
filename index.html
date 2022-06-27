@@ -13,7 +13,7 @@
 <body>
  
     <!-- ROOT -->
-    <div class="root">
+    <div id="root">
         <div class="inputs-todolist">
             <input type="text" placeholder="Nuovo todo">
             <button>Aggiungi</button>
@@ -21,30 +21,17 @@
 
         <div class="todolist-container">
             <ul class="todos-list">
-                <li class="todo">
-                    Cose da fare
+                <li v-for="(singleTodo, index) in todos" class="todo">
+                    
+                    <div :class="{'todo-done' : singleTodo.done}">
+                        {{singleTodo.text}}
+                    </div>
+                    
                     <div class="actions">
                         <span><i class="fa-solid fa-xmark"></i></span>
                     </div>       
                 </li>
-                <li class="todo">
-                    Cose da fare
-                    <div class="actions">
-                        <span><i class="fa-solid fa-xmark"></i></span>
-                    </div>       
-                </li>
-                <li class="todo">
-                    Cose da fare
-                    <div class="actions">
-                        <span><i class="fa-solid fa-xmark"></i></span>
-                    </div>       
-                </li>
-                <li class="todo">
-                    Cose da fare
-                    <div class="actions">
-                        <span><i class="fa-solid fa-xmark"></i></span>
-                    </div>       
-                </li>
+                
             </ul>
             
         </div>
