@@ -15,8 +15,8 @@
     <!-- ROOT -->
     <div id="root">
         <div class="inputs-todolist">
-            <input type="text" placeholder="Nuovo todo">
-            <button>Aggiungi</button>
+            <input v-model="newTodoText" type="text" placeholder="Nuovo todo">
+            <button @click="addNewTodo()">Aggiungi</button>
         </div>
 
         <div class="todolist-container">

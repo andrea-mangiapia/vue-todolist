@@ -18,6 +18,7 @@ var app = new Vue(
     {
         el: '#root',
         data: {
+            newTodoText: "",
             todos: [
                 {
                     text: "Fare i compiti",
@@ -38,8 +39,21 @@ var app = new Vue(
             removeTodo(index) {
                 this.todos.splice(index, 1);
             },
-        },
 
+            addNewTodo() {
+                if(this.newTodoText.length > 0){
+                    this.todos.push(
+                        {
+                            text : this.newTodoText,
+                            done : false,
+                        },                     
+                    );
+
+                    this.newTodoText = "";
+                };
+            },
+
+        },
 
     }
 )
